@@ -21,6 +21,8 @@ public class Rectangle extends Shape implements ShapeMethods{
         return rectangleCircumference;
     }
 
+    //Kender du ik johnson??????
+
     @Override
     public Point computeCenter() {
         Point rectangleCenter = new Point(xCoordinate+(length/2), yCoordinate+(height/2));
