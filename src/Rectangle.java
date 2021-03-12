@@ -23,16 +23,13 @@ public class Rectangle extends Shape implements ShapeMethods{
 
     @Override
     public Point computeCenter() {
-        Point rectangleCenter = new Point(xCoordinate+(length/2), yCoordinate+(height/2));
+        Point rectangleCenter = new Point(drawPointX +(length/2), drawPointY +(height/2));
         return rectangleCenter;
     }
 
     @Override
     public boolean checkPoint(double pointX, double pointY) {
-        double distanceX = Math.sqrt(pointX- xCoordinate)*(pointX - xCoordinate); //udregner afstanden fra x-koordinat til x-koordinat
-        double distanceY = Math.sqrt(pointY- yCoordinate)*(pointY- yCoordinate);
-
-        if(pointX > xCoordinate && xCoordinate + length > pointX && pointY > yCoordinate && yCoordinate-length < pointY){
+        if(pointX > drawPointX && drawPointX + length > pointX && pointY > drawPointY && drawPointY -length < pointY){
             return true;
         }
         return false;

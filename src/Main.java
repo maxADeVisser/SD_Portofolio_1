@@ -4,20 +4,20 @@ public class Main {
     public static void main(String[] args) {
         Circle circle1 = new Circle(50,50, 10);
         Circle circle2 = new Circle (50,500,10);
-        System.out.println(circle1.computeAreal());
-        System.out.println(circle1.computeCircumference());
-        System.out.println(circle1.computeCenter());
-        circle1.checkPoint(55,55);
-        System.out.println(euclideanDistance(circle1, circle2));
+        System.out.println("cir1 areal: " + circle1.computeAreal());
+        System.out.println("cir1 omkreds: " + circle1.computeCircumference());
+        System.out.println("cir1 computecenter: " + circle1.computeCenter());
+        System.out.println("cir1 checkpoint 55,55: " + circle1.checkPoint(55,55));
+        System.out.println( "euc dist cir1 og cir2: " + euclideanDistance(circle1, circle2));
 
         Rectangle rectangle1 = new Rectangle(50,50,10,10);
-        System.out.println(rectangle1.computeCenter());
-        System.out.println(rectangle1.checkPoint(60,60));
-        System.out.println(euclideanDistance(rectangle1, circle1));
+        System.out.println("rect1 computeCenter: " + rectangle1.computeCenter());
+        System.out.println("rect1 checkpoint 60,60: " + rectangle1.checkPoint(60,60));
+        System.out.println("euc distance mellem rect1 og cir1: " + euclideanDistance(rectangle1, circle1));
 
         Triangle triangle1 = new Triangle(0,0,10,0,0,11);
-        System.out.println(triangle1.computeAreal());
-        System.out.println(triangle1.computeCircumference());
+        System.out.println("Areal af trekant1: " + triangle1.computeAreal());
+        System.out.println("omkreds trekant1: " + triangle1.computeCircumference());
     }
 
     public static double euclideanDistance(Shape s1, Shape s2){

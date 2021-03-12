@@ -24,14 +24,14 @@ public class Circle extends Shape implements ShapeMethods{
 
     @Override
     public Point computeCenter() { //gør egenligt ikke rigtig noget for en cirkel
-        Point circleCenter = new Point(xCoordinate, yCoordinate);
+        Point circleCenter = new Point(drawPointX, drawPointY);
         return circleCenter;
     }
 
     @Override
     public boolean checkPoint(double pointX, double pointY) {
-        double distanceX = Math.sqrt(pointX- xCoordinate)*(pointX- xCoordinate); //udregner afstanden fra x-koordinat til x-koordinat
-        double distanceY = Math.sqrt(pointY- yCoordinate)*(pointY- yCoordinate);
+        double distanceX = Math.sqrt(pointX- drawPointX)*(pointX- drawPointX); //udregner afstanden fra x-koordinat til x-koordinat
+        double distanceY = Math.sqrt(pointY- drawPointY)*(pointY- drawPointY);
         if( distanceX < circleRadius && distanceY < circleRadius){
             return true;
         }
