@@ -15,9 +15,10 @@ public class Main {
         System.out.println("rect1 checkpoint 60,60: " + rectangle1.checkPoint(60,60));
         System.out.println("euc distance mellem rect1 og cir1: " + euclideanDistance(rectangle1, circle1));
 
-        Triangle triangle1 = new Triangle(10,10,0,0);
+        Triangle triangle1 = new Triangle(10,10,30,30);
         System.out.println("Areal af trekant1: " + triangle1.computeAreal());
         System.out.println("omkreds trekant1: " + triangle1.computeCircumference());
+        System.out.println("centerpoint of triangle1: " + triangle1.computeCenter());
     }
 
     public static double euclideanDistance(Shape s1, Shape s2){
