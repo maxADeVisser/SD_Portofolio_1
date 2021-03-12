@@ -28,11 +28,16 @@ public class Rectangle extends Shape implements ShapeMethods{
     }
 
     @Override
+<<<<<<< Updated upstream
     public boolean checkPoint(double pointX, double pointY) {
         double distanceX = Math.sqrt(pointX- xCoordinate)*(pointX - xCoordinate); //udregner afstanden fra x-koordinat til x-koordinat
         double distanceY = Math.sqrt(pointY- yCoordinate)*(pointY- yCoordinate);
 
         if(pointX > xCoordinate && xCoordinate + length > pointX && pointY > yCoordinate && yCoordinate-length < pointY){
+=======
+    public boolean checkPoint(double checkX, double checkY) {
+        if(checkX > drawPointX && drawPointX + length > checkX && checkY > drawPointY && drawPointY - height < checkY){
+>>>>>>> Stashed changes
             return true;
         }
         return false;

@@ -29,9 +29,16 @@ public class Circle extends Shape implements ShapeMethods{
     }
 
     @Override
+<<<<<<< Updated upstream
     public boolean checkPoint(double pointX, double pointY) {
         double distanceX = Math.sqrt(pointX- xCoordinate)*(pointX- xCoordinate); //udregner afstanden fra x-koordinat til x-koordinat
         double distanceY = Math.sqrt(pointY- yCoordinate)*(pointY- yCoordinate);
+=======
+    public boolean checkPoint(double checkX, double checkY) {
+        double distanceX = distanceBetweenXPoints(drawPointX,checkX);
+        double distanceY = distanceBetweenYPoints(drawPointY,checkY);
+
+>>>>>>> Stashed changes
         if( distanceX < circleRadius && distanceY < circleRadius){
             return true;
         }
