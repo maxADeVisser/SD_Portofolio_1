@@ -3,9 +3,9 @@ import java.lang.Math;
 
 public class Circle extends Shape implements ShapeMethods{
 
-    double circleRadius;
+    int circleRadius;
 
-    public Circle(double posX, double posY, double r) { //circle constructor
+    public Circle(int posX, int posY, int r) { //circle constructor
         super(posX, posY);
         this.circleRadius = r;
     }
@@ -24,14 +24,14 @@ public class Circle extends Shape implements ShapeMethods{
 
     @Override
     public Point computeCenter() { //gør egenligt ikke rigtig noget for en cirkel
-        Point circleCenter = new Point(drawPointX, drawPointY);
+        Point circleCenter = new Point(xCoordinate, yCoordinate);
         return circleCenter;
     }
 
     @Override
     public boolean checkPoint(double pointX, double pointY) {
-        double distanceX = Math.sqrt(pointX- drawPointX)*(pointX- drawPointX); //udregner afstanden fra x-koordinat til x-koordinat
-        double distanceY = Math.sqrt(pointY- drawPointY)*(pointY- drawPointY);
+        double distanceX = Math.sqrt(pointX- xCoordinate)*(pointX- xCoordinate); //udregner afstanden fra x-koordinat til x-koordinat
+        double distanceY = Math.sqrt(pointY- yCoordinate)*(pointY- yCoordinate);
         if( distanceX < circleRadius && distanceY < circleRadius){
             return true;
         }
