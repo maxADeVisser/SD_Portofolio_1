@@ -15,10 +15,9 @@ public class Main {
         System.out.println(rectangle1.checkPoint(60,60));
         System.out.println(euclideanDistance(rectangle1, circle1));
 
-        Triangle triangle1 = new Triangle(5,5,2,2);
-        System.out.println("Arealet af trekanten er: " + triangle1.computeAreal());
-        System.out.println("Trekant omkreds: " + triangle1.computeCircumference());
-        System.out.println(triangle1.computeCenter());
+        Triangle triangle1 = new Triangle(0,0,10,0,0,11);
+        System.out.println(triangle1.computeAreal());
+        System.out.println(triangle1.computeCircumference());
     }
 
     public static double euclideanDistance(Shape s1, Shape s2){
