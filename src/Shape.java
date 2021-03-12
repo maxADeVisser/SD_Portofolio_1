@@ -1,4 +1,5 @@
 public abstract class Shape implements ShapeMethods { //Shape superclass
+    //indicating the drawpoint which every shape has
     int xCoordinate;
     int yCoordinate;
 
