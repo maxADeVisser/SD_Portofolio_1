@@ -3,9 +3,9 @@ import java.lang.Math;
 
 public class Circle extends Shape implements ShapeMethods{
 
-    int circleRadius;
+    double circleRadius;
 
-    public Circle(int posX, int posY, int r) { //circle constructor
+    public Circle(double posX, double posY, double r) { //circle constructor
         super(posX, posY);
         this.circleRadius = r;
     }

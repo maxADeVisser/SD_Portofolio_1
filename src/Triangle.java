@@ -2,7 +2,7 @@ public class Triangle extends Shape implements ShapeMethods {
 
     double X2, Y2, X3, Y3; //triangles are represented as three points
 
-    public Triangle(int posX, int posY, int posX2, int posY2, int posX3, int posY3) {
+    public Triangle(double posX, double posY, double posX2, double posY2, double posX3, double posY3) {
         super(posX, posY);
         this.X2 = posX2;
         this.Y2 = posY2;

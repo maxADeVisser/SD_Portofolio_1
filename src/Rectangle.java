@@ -3,7 +3,7 @@ public class Rectangle extends Shape implements ShapeMethods{
     double length;
     double height;
 
-    public Rectangle(int posX, int posY, double l, double h) { //constructor. Oprettes med koordinatorne svarende til venstre øvre hjørne
+    public Rectangle(double posX, double posY, double l, double h) { //constructor. Oprettes med koordinatorne svarende til venstre øvre hjørne
         super(posX, posY);
         this.length = l;
         this.height = h;
@@ -20,8 +20,6 @@ public class Rectangle extends Shape implements ShapeMethods{
         double rectangleCircumference = (height + length) * 2;
         return rectangleCircumference;
     }
-
-    //Kender du ik johnson??????
 
     @Override
     public Point computeCenter() {
