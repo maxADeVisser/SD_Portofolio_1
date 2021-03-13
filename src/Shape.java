@@ -2,6 +2,7 @@ public abstract class Shape implements ShapeMethods { //Shape superclass
     //indicating the drawpoint which every shape has
     double drawPointX;
     double drawPointY;
+    Point center = new Point(0,0);
 
     public Shape(double posX, double posY){ //constructor
         this.drawPointX = posX;

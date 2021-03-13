@@ -3,13 +3,12 @@ public class Rectangle extends Shape implements ShapeMethods{
     double length;
     double height;
 
-
-
     //constructor. Oprettes med koordinatorne svarende til venstre øvre hjørne
     public Rectangle(double posX, double posY, double l, double h) {
         super(posX, posY);
         this.length = l;
         this.height = h;
+        this.computeCenter();
     }
 
     @Override
@@ -25,9 +24,11 @@ public class Rectangle extends Shape implements ShapeMethods{
     }
 
     @Override
-    public Point computeCenter() { //testet at den virker
-        Point rectangleCenter = new Point(drawPointX +(length/2), drawPointY +(height/2));
-        return rectangleCenter;
+    public void computeCenter() { //testet at den virker
+        center.setX(drawPointX + (length/2));
+        center.setY(drawPointY +(height/2));
+        //Point rectangleCenter = new Point(drawPointX +(length/2), drawPointY +(height/2));
+        //return rectangleCenter;
     }
 
     @Override

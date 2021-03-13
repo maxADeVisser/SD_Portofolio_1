@@ -8,6 +8,7 @@ public class Circle extends Shape implements ShapeMethods{
     public Circle(double posX, double posY, double r) { //circle constructor
         super(posX, posY);
         this.circleRadius = r;
+        this.computeCenter();
     }
 
     @Override
@@ -23,15 +24,17 @@ public class Circle extends Shape implements ShapeMethods{
     }
 
     @Override
-    public Point computeCenter() { //gør egenligt ikke rigtig noget for en cirkel
-        Point circleCenter = new Point(drawPointX, drawPointY);
-        return circleCenter;
+    public void computeCenter() { //gør egenligt ikke rigtig noget for en cirkel
+        center.setX(drawPointX);
+        center.setY(drawPointY);
+        //Point circleCenter = new Point(drawPointX, drawPointY);
+        //return circleCenter;
     }
 
     @Override
-    public boolean checkPoint(double pointX, double pointY) {
-        double distanceX = Math.sqrt(pointX- drawPointX)*(pointX- drawPointX); //udregner afstanden fra x-koordinat til x-koordinat
-        double distanceY = Math.sqrt(pointY- drawPointY)*(pointY- drawPointY);
+    public boolean checkPoint(double pointX, double pointY) { //testet at den virker korrekt
+        double distanceX = pointX-drawPointX;
+        double distanceY = pointY-drawPointY;
         if( distanceX < circleRadius && distanceY < circleRadius){
             return true;
         }
