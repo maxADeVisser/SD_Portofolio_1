@@ -4,13 +4,12 @@ public abstract class Shape implements ShapeMethods { //Shape superclass
     double drawPointY;
     Point center = new Point(0,0);
 
-    public Shape(double posX, double posY){ //constructor
-        this.drawPointX = posX;
-        this.drawPointY = posY;
-    }
-    public double distanceBetweenTwoPoints(double x1, double y1, double x2, double y2){
-        double distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        return distance;
+    int xCoordinate;
+    int yCoordinate;
+
+    public Shape(int posX, int posY){ //constructor
+        this.xCoordinate = posX;
+        this.yCoordinate = posY;
     }
 }
 
